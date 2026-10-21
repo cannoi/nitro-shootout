@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitro Shootout - Đua Xe Bắn Súng Arcade</title>
+  <link rel="stylesheet" href="style.css">
+<style>.paf-made-by{position:fixed;right:8px;bottom:8px;width:min(72px,12vw);max-width:12vw;height:auto;object-fit:contain;opacity:.5;background:transparent;padding:0;border:0;box-shadow:none;filter:none;pointer-events:none;z-index:30}</style></head>
+<body>
+  <div id="app">
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen active">
+      <div class="arcade-banner">
+        <h1>NITRO SHOOTOUT</h1>
+        <p class="subtitle">ĐUA XE TỐC ĐỘ • NÉ VẬT CẢN • TIÊU DIỆT KẺ ĐỊCH</p>
+      </div>
+      <div class="card">
+        <div class="form-group">
+          <label for="player-name">Tên Tay Đua:</label>
+          <input type="text" id="player-name" placeholder="Nhập tên của bạn..." maxlength="20" value="Driver01">
+        </div>
+        <button id="start-btn" class="btn btn-primary">BẮT ĐẦU ĐUA</button>
+      </div>
+      <div class="instructions">
+        <h3>Hướng dẫn điều khiển:</h3>
+        <p>🎮 <b>← →</b> hoặc <b>A / D</b>: Di chuyển trái / phải</p>
+        <p>⚡ <b>SPACE</b> hoặc <b>Click</b>: Bắn đạn tiêu diệt địch</p>
+        <p>🏎️ <b>↑</b> hoặc <b>W</b>: Tăng tốc (tính điểm nhanh hơn)</p>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+      <div class="game-header">
+        <div class="stat-box">Điểm: <span id="hud-score">0</span></div>
+        <div class="stat-box">Quãng đường: <span id="hud-distance">0</span>m</div>
+        <div class="stat-box">Năng lượng: <span id="hud-health">100</span>%</div>
+      </div>
+      <div class="canvas-container">
+        <canvas id="gameCanvas" width="480" height="640"></canvas>
+      </div>
+      <div class="mobile-controls">
+        <div class="control-row">
+          <button id="btn-left" class="ctrl-btn">◀</button>
+          <button id="btn-fire" class="ctrl-btn fire">🔥 BẮN</button>
+          <button id="btn-right" class="ctrl-btn">▶</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="screen">
+      <div class="arcade-banner">
+        <h1 class="danger">XE ĐÃ BỊ PHÁ HỦY</h1>
+        <p class="subtitle">Trò chơi kết thúc</p>
+      </div>
+      <div class="card">
+        <div class="final-stats">
+          <p>Tay đua: <b id="final-name">-</b></p>
+          <p>Điểm số đạt được: <b id="final-score" class="highlight">0</b></p>
+          <p>Quãng đường: <b id="final-distance">0</b>m</p>
+        </div>
+        <div class="button-group">
+          <button id="restart-btn" class="btn btn-primary">CHƠI LẠI</button>
+          <button id="menu-btn" class="btn btn-secondary">MENU CHÍNH</button>
+        </div>
+      </div>
+
+      <div class="leaderboard-box">
+        <h3>🏆 BẢNG XẾP HẠNG CAO THỦ</h3>
+        <div id="leaderboard-list">Đang tải...</div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="game.js"></script>
+<img class="paf-made-by" src="/made-by.png" alt="Made with App Builder — Pi SoloHost"></body>
+</html>

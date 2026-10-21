@@ -1,0 +1,7 @@
+title: "Nitro Shootout"
+eyebrow: SoloHost App
+description: "Tạo game đua xe bắn nhâu gay cấn"
+footer_hint: Ready to run on Pi Desktop SoloHost.
+output_file: .env
+after_save: Saved. Start the app from SoloHost.
+fields: []

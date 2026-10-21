@@ -1,0 +1,14 @@
+{
+  "name": "nitro-shootout",
+  "version": "1.0.0",
+  "description": "Trò chơi đua xe bắn súng 2D Arcade",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "helmet": "^7.1.0"
+  }
+}

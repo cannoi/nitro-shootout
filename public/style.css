@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', monospace;
+}
+
+body {
+  background-color: #0b0f19;
+  color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+#app {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.screen.active {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.arcade-banner {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.arcade-banner h1 {
+  font-size: 22px;
+  color: #fbbf24;
+  text-shadow: 3px 3px #dc2626;
+  margin-bottom: 8px;
+}
+
+.arcade-banner h1.danger {
+  color: #ef4444;
+  text-shadow: 3px 3px #7f1d1d;
+}
+
+.subtitle {
+  font-size: 8px;
+  color: #9ca3af;
+  line-height: 1.4;
+}
+
+.card {
+  background: #1e293b;
+  border: 3px solid #3b82f6;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 8px 0 #1d4ed8;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 10px;
+  margin-bottom: 8px;
+  color: #60a5fa;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  background: #0f172a;
+  border: 2px solid #64748b;
+  color: #fff;
+  font-size: 11px;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #3b82f6;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 11px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.1s, background 0.2s;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.4);
+}
+
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.4);
+}
+
+.btn-primary {
+  background-color: #22c55e;
+  color: #fff;
+  border: 2px solid #15803d;
+  box-shadow: 0 4px 0 #15803d;
+}
+
+.btn-primary:hover {
+  background-color: #16a34a;
+}
+
+.btn-secondary {
+  background-color: #475569;
+  color: #fff;
+  border: 2px solid #334155;
+  box-shadow: 0 4px 0 #334155;
+  margin-top: 10px;
+}
+
+.instructions {
+  font-size: 8px;
+  background: #111827;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px dashed #4b5563;
+  width: 100%;
+  line-height: 1.6;
+}
+
+.instructions h3 {
+  color: #fbbf24;
+  margin-bottom: 8px;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #334155;
+}
+
+.stat-box {
+  font-size: 9px;
+  color: #38bdf8;
+}
+
+.canvas-container {
+  border: 4px solid #f59e0b;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+canvas {
+  display: block;
+  background: #1e293b;
+}
+
+.mobile-controls {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.control-row {
+  display: flex;
+  gap: 10px;
+}
+
+.ctrl-btn {
+  flex: 1;
+  padding: 15px;
+  background: #334155;
+  color: #fff;
+  border: 2px solid #64748b;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #1e293b;
+}
+
+.ctrl-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #1e293b;
+}
+
+.ctrl-btn.fire {
+  background: #dc2626;
+  border-color: #991b1b;
+  box-shadow: 0 4px 0 #991b1b;
+  color: #fff;
+  font-size: 10px;
+}
+
+.final-stats {
+  font-size: 9px;
+  line-height: 2;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: #34d399;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboard-box {
+  background: #0f172a;
+  border: 2px solid #475569;
+  border-radius: 6px;
+  padding: 15px;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.leaderboard-box h3 {
+  font-size: 9px;
+  color: #fbbf24;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.lb-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #1e293b;
+}
+
+.paf-made-by {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  font-size: 7px;
+  color: #64748b;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #334155;
+  z-index: 1000;
+}
